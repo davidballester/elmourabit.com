@@ -23,7 +23,7 @@ const linkStyles = css({
     color: 'inherit',
   },
   ':hover': {
-    color: 'var(--psColorsPurpleCustom)',
+    color: 'var(--psColorsTextIconHighOnLightContrast)',
   },
 });
 

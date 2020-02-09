@@ -22,7 +22,7 @@ const iconLinkStyles = css({
     color: 'var(--psColorsTextIconHighOnLight)',
   },
   ':hover': {
-    color: 'var(--psColorsPurpleCustom)',
+    color: 'var(--psColorsTextIconHighOnLightContrast)',
   },
 });
 

@@ -7,6 +7,7 @@ import logo from '../assets/logo.svg';
 const imgStyles = css({
   display: 'block',
   margin: 'auto',
+  width: '100%',
   maxWidth: 600,
 });
 

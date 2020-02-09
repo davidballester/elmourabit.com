@@ -12,6 +12,8 @@ const layoutStyles = css({
   minHeight: '100vh',
   paddingTop: 'var(--psLayoutSpacingLarge)',
   paddingBottom: 'var(--psLayoutSpacingLarge)',
+  paddingLeft: 'var(--psLayoutSpacingMedium)',
+  paddingRight: 'var(--psLayoutSpacingMedium)',
 });
 
 const mainStyles = css({
