@@ -2,19 +2,25 @@ import React from 'react';
 
 import { css } from 'glamor';
 
+import { mediaMinWidthMd } from '../constants';
+
 const h1Styles = css({
-  fontSize: 'var(--psTypeFontSizeJumbo)',
   fontWeight: 'var(--psTypeFontWeightBold)',
-  lineHeight: 1.2,
   marginTop: 'var(--psLayoutSpacingLarge)',
   marginBottom: 'var(--psLayoutSpacingMedium)',
   color: 'var(--psColorsTextIconHighOnLight)',
+  fontSize: 'var(--psTypeFontSizeXXLarge)',
+  lineHeight: 1.4,
+  [mediaMinWidthMd]: {
+    fontSize: 'var(--psTypeFontSizeJumbo)',
+    lineHeight: 1.2,
+  },
 });
 
 const pStyles = css({
-  fontSize: 'var(--psTypeFontSizeMedium)',
   marginBottom: 'var(--psLayoutSpacingLarge)',
   color: 'var(--psColorsTextIconHighOnLight)',
+  fontSize: 'var(--psTypeFontSizeMedium)',
 });
 
 const linkStyles = css({
@@ -32,7 +38,7 @@ const MainText = () => (
     <h1 {...h1Styles}>
       Hola, soy Namae El Mourabit.
       <br />
-      Soy especialista en Valores de Back Office
+      Soy especialista de Back Office en Valores.
     </h1>
     <p {...pStyles}>
       Soy una economista con más de cinco años de experiencia en Back Office de
@@ -40,13 +46,13 @@ const MainText = () => (
       este complejo mundo financiero.
     </p>
     <p {...pStyles}>
-      If you want to reach out,{' '}
+      Si quieres contactar conmigo,{' '}
       <a
         {...linkStyles}
         href="https://twitter.com/namaeelmourabit"
         target="blank"
       >
-        send me a tweet!
+        ¡mándame un tweet!
       </a>
     </p>
   </>
