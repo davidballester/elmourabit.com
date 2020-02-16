@@ -5,9 +5,6 @@ import {
   SocialTwitterIcon,
   SocialLinkedinIcon,
 } from '@pluralsight/ps-design-system-icon';
-import * as foo from '@pluralsight/ps-design-system-core';
-
-console.log(foo);
 
 const footerStyles = css({
   borderTop: '1px solid var(--psColorsBorderLowOnLight)',

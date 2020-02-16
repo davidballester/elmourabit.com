@@ -3,6 +3,7 @@ import React from 'react';
 import { css } from 'glamor';
 
 import { mediaMinWidthMd } from '../constants';
+import MovingText from './MovingText';
 
 const h1Styles = css({
   fontWeight: 'var(--psTypeFontWeightBold)',
@@ -10,6 +11,8 @@ const h1Styles = css({
   color: 'var(--psColorsTextIconHighOnLight)',
   fontSize: 'var(--psTypeFontSizeXXLarge)',
   lineHeight: 1.4,
+  display: 'flex',
+  position: 'relative',
   [mediaMinWidthMd]: {
     fontSize: 'var(--psTypeFontSizeJumbo)',
     lineHeight: 1.2,
@@ -45,7 +48,21 @@ const linkStyles = css({
 
 const MainText = () => (
   <>
-    <h1 {...h1Styles}>Hola, soy Namae El Mourabit.</h1>
+    <h1 {...h1Styles}>
+      <MovingText
+        styles={{ width: '100%' }}
+        texts={[
+          'Hola, soy Namae El Mourabit',
+          'Bonjour, je suis Namae El Mourabit',
+          "Hello, I'm Namae El Mourabit",
+          <span
+            style={{ direction: 'rtl', width: '100%', display: 'inline-block' }}
+          >
+            مرحباً ، أنا نماء{<br />} المرابط
+          </span>,
+        ]}
+      />
+    </h1>
     <h2 {...h2Styles}>Soy especialista de Back Office en Valores.</h2>
     <p {...pStyles}>
       Soy una economista con más de cinco años de experiencia en Back Office de

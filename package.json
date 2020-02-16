@@ -10,6 +10,7 @@
     "@pluralsight/ps-design-system-link": "^9.0.12",
     "@pluralsight/ps-design-system-normalize": "^3.1.23",
     "@pluralsight/ps-design-system-theme": "^4.0.9",
+    "@rehooks/component-size": "^1.0.3",
     "glamor": "^2.20.40",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
