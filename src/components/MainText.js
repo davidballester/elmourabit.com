@@ -7,13 +7,23 @@ import { mediaMinWidthMd } from '../constants';
 const h1Styles = css({
   fontWeight: 'var(--psTypeFontWeightBold)',
   marginTop: 'var(--psLayoutSpacingLarge)',
-  marginBottom: 'var(--psLayoutSpacingMedium)',
   color: 'var(--psColorsTextIconHighOnLight)',
   fontSize: 'var(--psTypeFontSizeXXLarge)',
   lineHeight: 1.4,
   [mediaMinWidthMd]: {
     fontSize: 'var(--psTypeFontSizeJumbo)',
     lineHeight: 1.2,
+  },
+});
+
+const h2Styles = css({
+  fontWeight: 'var(--psTypeFontWeightBold)',
+  marginBottom: 'var(--psLayoutSpacingMedium)',
+  color: 'var(--psColorsTextIconHighOnLight)',
+  fontSize: 'var(--psTypeFontSizeLarge)',
+  lineHeight: 1.4,
+  [mediaMinWidthMd]: {
+    fontSize: 'var(--psTypeFontSizeJumbo)',
   },
 });
 
@@ -35,11 +45,8 @@ const linkStyles = css({
 
 const MainText = () => (
   <>
-    <h1 {...h1Styles}>
-      Hola, soy Namae El Mourabit.
-      <br />
-      Soy especialista de Back Office en Valores.
-    </h1>
+    <h1 {...h1Styles}>Hola, soy Namae El Mourabit.</h1>
+    <h2 {...h2Styles}>Soy especialista de Back Office en Valores.</h2>
     <p {...pStyles}>
       Soy una economista con más de cinco años de experiencia en Back Office de
       un banco. Siempre busco retos y nuevas oportunidades para desarrollarme en
