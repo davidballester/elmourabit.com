@@ -271,7 +271,7 @@ template {
   --psColorsPurple10: #351973;
   --psColorsTextIconHighOnDark: hsla(0, 0%, 100%, 0.95);
   --psColorsTextIconHighOnLight: #3f3d56;
-  --psColorsTextIconHighOnLightContrast: #6c63ff;
+  --psColorsTextIconHighOnLightContrast: #a6020e;
   --psColorsTextIconLowOnDark: hsla(0, 0%, 100%, 0.65);
   --psColorsTextIconLowOnLight: rgba(0, 0, 0, 0.55);
   --psColorsBorderHighOnDark: hsla(0, 0%, 100%, 0.3);

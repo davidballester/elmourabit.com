@@ -11,6 +11,8 @@ const imgStyles = css({
   maxWidth: 600,
 });
 
-const Logo = () => <img {...imgStyles} src={logo} />;
+const Logo = () => (
+  <img {...imgStyles} src={logo} alt="Namae El Mourabit Belhadi" />
+);
 
 export default Logo;
