@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { css } from 'glamor';
+import { useTranslation, Trans } from 'react-i18next';
 
 import { mediaMinWidthMd } from '../constants';
 import MovingText from './MovingText';
@@ -46,40 +47,47 @@ const linkStyles = css({
   },
 });
 
-const MainText = () => (
-  <>
-    <h1 {...h1Styles}>
-      <MovingText
-        styles={{ width: '100%' }}
-        texts={[
-          'Hola, soy Namae El Mourabit',
-          'Bonjour, je suis Namae El Mourabit',
-          "Hello, I'm Namae El Mourabit",
-          <span
-            style={{ direction: 'rtl', width: '100%', display: 'inline-block' }}
-          >
-            مرحباً ، أنا نماء{<br />} المرابط
-          </span>,
-        ]}
-      />
-    </h1>
-    <h2 {...h2Styles}>Soy especialista de Back Office en Valores.</h2>
-    <p {...pStyles}>
-      Soy una economista con más de cinco años de experiencia en Back Office de
-      un banco. Siempre busco retos y nuevas oportunidades para desarrollarme en
-      este complejo mundo financiero.
-    </p>
-    <p {...pStyles}>
-      Si quieres contactar conmigo,{' '}
-      <a
-        {...linkStyles}
-        href="https://twitter.com/namaeelmourabit"
-        target="blank"
-      >
-        ¡mándame un tweet!
-      </a>
-    </p>
-  </>
-);
+const MainText = () => {
+  const { t } = useTranslation();
+  return (
+    <>
+      <h1 {...h1Styles}>
+        <MovingText
+          styles={{ width: '100%' }}
+          texts={[
+            t('hello', { lng: 'en' }),
+            t('hello', { lng: 'es' }),
+            t('hello', { lng: 'fr' }),
+            <span
+              style={{
+                direction: 'rtl',
+                width: '100%',
+                display: 'inline-block',
+              }}
+            >
+              <Trans i18nKey="hello" tOptions={{ lng: 'ar' }} />
+            </span>,
+          ]}
+        />
+      </h1>
+      <h2 {...h2Styles}>Soy especialista de Back Office en Valores.</h2>
+      <p {...pStyles}>
+        Soy una economista con más de cinco años de experiencia en Back Office
+        de un banco. Siempre busco retos y nuevas oportunidades para
+        desarrollarme en este complejo mundo financiero.
+      </p>
+      <p {...pStyles}>
+        Si quieres contactar conmigo,{' '}
+        <a
+          {...linkStyles}
+          href="https://twitter.com/namaeelmourabit"
+          target="blank"
+        >
+          ¡mándame un tweet!
+        </a>
+      </p>
+    </>
+  );
+};
 
 export default MainText;
