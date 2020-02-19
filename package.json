@@ -12,8 +12,10 @@
     "@pluralsight/ps-design-system-theme": "^4.0.9",
     "@rehooks/component-size": "^1.0.3",
     "glamor": "^2.20.40",
+    "i18next": "^19.2.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-i18next": "^11.3.3",
     "react-spring": "^8.0.27"
   },
   "scripts": {
