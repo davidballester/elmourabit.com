@@ -16,7 +16,7 @@ const MovingText = ({ texts, styles }) => {
     return () => clearInterval(intervalId);
   }, [texts, textIndex]);
 
-  const transitions = useTransition(texts[textIndex], text => text, {
+  const transitions = useTransition(texts[textIndex], item => item.key, {
     from: { position: 'absolute', width: '100%', opacity: 0 },
     enter: { opacity: 1 },
     leave: { opacity: 0 },
