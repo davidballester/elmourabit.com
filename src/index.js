@@ -21,7 +21,7 @@ i18n
           hello: "Hello, I'm Namae El Mourabit",
           subtitle: "I'm a settlement securities Back Office specialist",
           text:
-            "I'm an economist with more than five years of experience in a bank's Back Office. I'm always looking for challenges and new oportunities to further develop my career in this complex financial world.",
+            "I'm an economist with more than five years of experience in a bank's Back Office. I'm always looking for challenges and new opportunities to further develop my career in this complex financial world.",
           contact: 'If you want to reach out,',
           contactLink: 'send me a tweet!',
         },
@@ -41,20 +41,22 @@ i18n
         translation: {
           language: 'Français',
           hello: 'Bonjour, je suis Namae El Mourabit',
-          subtitle: 'Lorem ipsum dolor sit amet',
-          text: 'Lorem ipsum dolor sit amet',
-          contact: 'Lorem ipsum',
-          contactLink: 'Dolor sit amet',
+          subtitle: 'Specialist en Back-Office financial',
+          text:
+            "Je suis une economist avec plus de cinq ans d'experience en Back-Office dans un banc. Je cherche toujour des opportunités pour mon développement dans ce complex monde finacier.",
+          contact: 'Si vous souhaite contacter avec moi',
+          contactLink: 'Envoi mon un tweet!',
         },
       },
       ar: {
         translation: {
           language: 'العربية',
           hello: 'مرحباً ، أنا نماء المرابط',
-          subtitle: 'Lorem ipsum dolor sit amet',
-          text: 'Lorem ipsum dolor sit amet',
-          contact: 'Lorem ipsum',
-          contactLink: 'Dolor sit amet',
+          subtitle: ' متخصصة في العالم المالي',
+          text:
+            'أنا خبيرة اقتصادي ولدي أكثر من خمس سنوات من الخبرة في  لبنك. أبحث دائمًا عن التحديات والفرص الجديدة للتطور في هذا العالم المالي',
+          contact: 'إذا كنت تريد الاتصال بي',
+          contactLink: 'أرسل لي تويتر',
         },
       },
     },
