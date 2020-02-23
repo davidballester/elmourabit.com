@@ -75,16 +75,20 @@ const MainText = () => {
           ]}
         />
       </h1>
-      <h2 {...h2Styles}>{t('subtitle')}</h2>
-      <p {...pStyles}>{t('text')}</p>
-      <p {...pStyles}>
-        Si quieres contactar conmigo,{' '}
+      <h2 {...h2Styles} style={{ direction: i18n.dir() }}>
+        {t('subtitle')}
+      </h2>
+      <p {...pStyles} style={{ direction: i18n.dir() }}>
+        {t('text')}
+      </p>
+      <p {...pStyles} style={{ direction: i18n.dir() }}>
+        {t('contact')}{' '}
         <a
           {...linkStyles}
           href="https://twitter.com/namaeelmourabit"
           target="blank"
         >
-          ¡mándame un tweet!
+          {t('contactLink')}
         </a>
       </p>
     </>
