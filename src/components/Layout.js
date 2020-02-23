@@ -3,6 +3,7 @@ import React from 'react';
 import { css } from 'glamor';
 
 import Footer from './Footer';
+import Languages from './Languages';
 
 const layoutStyles = css({
   maxWidth: 960,
@@ -22,6 +23,7 @@ const mainStyles = css({
 
 const Layout = ({ children }) => (
   <div {...layoutStyles}>
+    <Languages />
     <main {...mainStyles}>{children}</main>
     <Footer />
   </div>
