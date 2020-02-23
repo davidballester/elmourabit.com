@@ -418,3 +418,8 @@ select,
 textarea {
   font-family: inherit;
 }
+
+/* Custom styles */
+button:focus:before {
+  border-color: #a6020e !important;
+}
