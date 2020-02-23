@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
+    "@pluralsight/ps-design-system-button": "^17.2.0",
     "@pluralsight/ps-design-system-core": "^5.5.2",
     "@pluralsight/ps-design-system-featureflags": "^1.1.10",
     "@pluralsight/ps-design-system-icon": "^17.1.5",
