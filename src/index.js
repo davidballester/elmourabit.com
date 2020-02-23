@@ -17,22 +17,36 @@ i18n
     resources: {
       en: {
         translation: {
+          language: 'English',
           hello: "Hello, I'm Namae El Mourabit",
+          subtitle: "I'm a settlement securities Back Office specialist",
+          text:
+            "I'm an economist with more than five years of experience in a bank's Back Office. I'm always looking for challenges and new oportunities to further develop my career in this complex financial world.",
         },
       },
       es: {
         translation: {
+          language: 'Español',
           hello: 'Hola, soy Namae El Mourabit',
+          subtitle: 'Soy especialista de Back Office en Valores.',
+          text:
+            'Soy una economista con más de cinco años de experiencia en Back Office de un banco. Siempre busco retos y nuevas oportunidades para desarrollarme en este complejo mundo financiero.',
         },
       },
       fr: {
         translation: {
+          language: 'Français',
           hello: 'Bonjour, je suis Namae El Mourabit',
+          subtitle: 'Lorem ipsum dolor sit amet',
+          text: 'Lorem ipsum dolor sit amet',
         },
       },
       ar: {
         translation: {
+          language: 'العربية',
           hello: 'مرحباً ، أنا نماء المرابط',
+          subtitle: 'Lorem ipsum dolor sit amet',
+          text: 'Lorem ipsum dolor sit amet',
         },
       },
     },

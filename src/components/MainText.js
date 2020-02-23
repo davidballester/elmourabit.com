@@ -2,9 +2,22 @@ import React from 'react';
 
 import { css } from 'glamor';
 import { useTranslation, Trans } from 'react-i18next';
+import i18n from 'i18next';
 
 import { mediaMinWidthMd } from '../constants';
 import MovingText from './MovingText';
+
+const Title = ({ lng }) => (
+  <span
+    style={{
+      direction: i18n.dir(lng),
+      width: '100%',
+      display: 'inline-block',
+    }}
+  >
+    <Trans i18nKey="hello" tOptions={{ lng }} />
+  </span>
+);
 
 const h1Styles = css({
   fontWeight: 'var(--psTypeFontWeightBold)',
@@ -55,27 +68,15 @@ const MainText = () => {
         <MovingText
           styles={{ width: '100%' }}
           texts={[
-            t('hello', { lng: 'en' }),
-            t('hello', { lng: 'es' }),
-            t('hello', { lng: 'fr' }),
-            <span
-              style={{
-                direction: 'rtl',
-                width: '100%',
-                display: 'inline-block',
-              }}
-            >
-              <Trans i18nKey="hello" tOptions={{ lng: 'ar' }} />
-            </span>,
+            <Title key="en" lng="en" />,
+            <Title key="es" lng="es" />,
+            <Title key="fr" lng="fr" />,
+            <Title key="ar" lng="ar" />,
           ]}
         />
       </h1>
-      <h2 {...h2Styles}>Soy especialista de Back Office en Valores.</h2>
-      <p {...pStyles}>
-        Soy una economista con más de cinco años de experiencia en Back Office
-        de un banco. Siempre busco retos y nuevas oportunidades para
-        desarrollarme en este complejo mundo financiero.
-      </p>
+      <h2 {...h2Styles}>{t('subtitle')}</h2>
+      <p {...pStyles}>{t('text')}</p>
       <p {...pStyles}>
         Si quieres contactar conmigo,{' '}
         <a
