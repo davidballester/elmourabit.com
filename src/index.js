@@ -4,6 +4,7 @@ import { render } from 'react-dom';
 import Theme from '@pluralsight/ps-design-system-theme';
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import { Helmet } from 'react-helmet';
 
 import Layout from './components/Layout';
 import Logo from './components/Logo';
@@ -70,6 +71,12 @@ i18n
 
 const App = () => (
   <Theme name={Theme.names.light}>
+    <Helmet>
+      <meta
+        name="description"
+        content="Hello, I'm Namae El Mourabit, an economist with more than five years of experience in a bank's Back Office."
+      />
+    </Helmet>
     <Layout>
       <Logo />
       <MainText />
