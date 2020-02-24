@@ -72,10 +72,27 @@ i18n
 const App = () => (
   <Theme name={Theme.names.light}>
     <Helmet>
+      <title>Namae El Mourabit</title>
       <meta
         name="description"
         content="Hello, I'm Namae El Mourabit, an economist with more than five years of experience in a bank's Back Office."
       />
+      <meta property="og:title" content="Name El Mourabit" />
+      <meta
+        property="og:description"
+        content="Hello, I'm Namae El Mourabit, an economist with more than five years of experience in a bank's Back Office."
+      />
+      <meta
+        property="og:image"
+        content="https://elmourabit.com/site-thumbnail.png"
+      />
+      <meta property="og:url" content="https://elmourabit.com" />
+      <meta
+        name="twitter:card"
+        content="https://elmourabit.com/site-large-image.png"
+      />
+      <meta property="og:site_name" content="Namae El Mourabit" />
+      <meta name="twitter:image:alt" content="Hello, I'm Namae El Mourabit" />
     </Helmet>
     <Layout>
       <Logo />
