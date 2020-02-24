@@ -2,6 +2,8 @@ import React from 'react';
 
 import { useTranslation } from 'react-i18next';
 import { css } from 'glamor';
+import { Helmet } from 'react-helmet';
+
 import Button from '@pluralsight/ps-design-system-button';
 
 const Language = ({ language, name }) => {
@@ -31,19 +33,24 @@ const languagesItemStyles = css({
 });
 
 const Languages = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const languages = ['en', 'es', 'fr', 'ar'];
   return (
-    <ul {...languagesListStyles}>
-      {languages.map(language => (
-        <li key={language} {...languagesItemStyles}>
-          <Language
-            language={language}
-            name={t('language', { lng: language })}
-          />
-        </li>
-      ))}
-    </ul>
+    <>
+      <Helmet>
+        <html lang={i18n.language} />
+      </Helmet>
+      <ul {...languagesListStyles}>
+        {languages.map(language => (
+          <li key={language} {...languagesItemStyles}>
+            <Language
+              language={language}
+              name={t('language', { lng: language })}
+            />
+          </li>
+        ))}
+      </ul>
+    </>
   );
 };
 
