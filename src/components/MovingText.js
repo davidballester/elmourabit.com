@@ -10,13 +10,14 @@ const MovingText = ({ texts, styles }) => {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      const newTextIndex = (textIndex + 1) % texts.length;
+      const newTextIndex = (textIndex + 1) % Object.keys(texts).length;
       setTextIndex(newTextIndex);
     }, 3000);
     return () => clearInterval(intervalId);
   }, [texts, textIndex]);
 
-  const transitions = useTransition(texts[textIndex], item => item.key, {
+  const textKey = Object.keys(texts)[textIndex];
+  const transitions = useTransition(texts[textKey], textKey, {
     from: { position: 'absolute', width: '100%', opacity: 0 },
     enter: { opacity: 1 },
     leave: { opacity: 0 },

@@ -69,12 +69,12 @@ const MainText = () => {
       <h1 {...h1Styles}>
         <MovingText
           styles={{ width: '100%' }}
-          texts={[
-            <Title key="en" lng="en" />,
-            <Title key="es" lng="es" />,
-            <Title key="fr" lng="fr" />,
-            <Title key="ar" lng="ar" />,
-          ]}
+          texts={{
+            en: <Title key="en" lng="en" />,
+            es: <Title key="es" lng="es" />,
+            fr: <Title key="fr" lng="fr" />,
+            ar: <Title key="ar" lng="ar" />,
+          }}
         />
       </h1>
       <h2 {...h2Styles} style={{ direction: i18n.dir() }}>
