@@ -27,9 +27,11 @@ const h1Styles = css({
   lineHeight: 1.4,
   display: 'flex',
   position: 'relative',
+  height: '2.8em',
   [mediaMinWidthMd]: {
     fontSize: 'var(--psTypeFontSizeJumbo)',
     lineHeight: 1.2,
+    height: 'auto',
   },
 });
 
