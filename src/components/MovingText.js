@@ -3,8 +3,12 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useTransition, animated } from 'react-spring';
 import useComponentSize from '@rehooks/component-size';
 
-const MovingText = ({ texts, styles }) => {
-  const [textIndex, setTextIndex] = useState(0);
+const getInitialTextIndex = (texts, initialText) =>
+  Object.keys(texts).findIndex(lng => lng === initialText);
+
+const MovingText = ({ texts, styles, initialText }) => {
+  const initialTextIndex = getInitialTextIndex(texts, initialText);
+  const [textIndex, setTextIndex] = useState(initialTextIndex);
   const ref = useRef(null);
   const { height } = useComponentSize(ref);
 
@@ -15,6 +19,10 @@ const MovingText = ({ texts, styles }) => {
     }, 3000);
     return () => clearInterval(intervalId);
   }, [texts, textIndex]);
+
+  useEffect(() => {
+    setTextIndex(getInitialTextIndex(texts, initialText));
+  }, [initialText, texts]);
 
   const textKey = Object.keys(texts)[textIndex];
   const transitions = useTransition(texts[textKey], textKey, {

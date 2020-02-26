@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { css } from 'glamor';
 import { useTranslation, Trans } from 'react-i18next';
@@ -63,7 +63,11 @@ const linkStyles = css({
 });
 
 const MainText = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
+  useEffect(() => {
+    setCurrentLanguage(i18n.language);
+  }, [i18n.language]);
   return (
     <>
       <h1 {...h1Styles}>
@@ -75,6 +79,7 @@ const MainText = () => {
             fr: <Title key="fr" lng="fr" />,
             ar: <Title key="ar" lng="ar" />,
           }}
+          initialText={currentLanguage}
         />
       </h1>
       <h2 {...h2Styles} style={{ direction: i18n.dir() }}>
